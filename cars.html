@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +20,7 @@
 
         body {
             background: linear-gradient(150deg, rgb(247, 103, 103), rgb(231, 231, 96), rgb(186, 136, 136));
+            height: 100%;
         }
 
         nav {
@@ -136,14 +138,18 @@
         }
 
         footer {
-            padding-left: 10px;
+            padding-left: 40px;
             background: linear-gradient(to left, rgba(241, 162, 14, 0.916), rgb(251, 164, 164));
+            position: absolute;
+            bottom: 0px;
+            justify-content: center;
 
         }
 
         .signup {
             position: absolute;
             justify-content: center;
+            align-items: center;
             width: 290px;
             height: 600px;
             margin-top: 90px;
@@ -163,6 +169,7 @@
         form {
             width: 250px;
             margin-left: 20px;
+            
         }
 
         form label {
@@ -200,6 +207,23 @@
             font-size: 18px;
             text-align: center;
         }
+        #manu{
+            align-items: center;
+            width: 100%;
+
+        }
+        table{
+         
+            background:linear-gradient(150deg, rgb(247, 103, 103), rgb(231, 231, 96), rgb(186, 136, 136));
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            bottom: 30px;
+            font-size: 22px;
+        }
+        .details{
+            display: none;
+        }
 
         @media screen and (max-width:900px) {
             .im {
@@ -221,7 +245,7 @@
                 <li>home</li>
             </a>
             <a href="#">
-                <li>details</li>
+                <li onclick="details()">details</li>
             </a>
             <a href="#">
                 <li>order</li>
@@ -235,7 +259,7 @@
             <button onclick="login()">login</button>
         </ul>
     </nav>
-    <section class="im">
+    <section class="im"> 
         <div>
             <img src="./cars1.jpg" alt="">
             <button>buy</button>
@@ -443,7 +467,7 @@
         <div>
             <img src="./cars2.jpg" alt="">
             <button>buy</button>
-    </section>
+     </section>
     <div class="signup">
         <h1>Sign Up</h1>
         <form action="" method="post">
@@ -463,7 +487,117 @@
             <input id="sign" type="submit" value="submit">
             <p>Already you have account?<a href="#">login here</a></p>
         </form>
-    </div>
+    </div > 
+    <div class="details">
+        <table>
+            <thead>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                <th>NAME OF CANDIDATE
+                    <th>ARJI JOSHI MANOHAR</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                <th>COURSE
+                    <th>BACHELOR OF COMPUTER APPLICATIONS</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                <th>ID NUM
+                    <th>2146250490</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                <th>HALLTICKET
+                    <th>210807400003</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                <th>SSC NUM
+                    <th>10006422538</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                <th>AADHAR NUM
+                    <th>799259111310</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                <th>MOBILE NUM
+                    <th>7093389159</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                <th>FATHER
+                    <th>A.SEETHA RAM BABU</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>9</th>
+                <th>MOTHER
+                    <th>A.VENKATA LAKSHMI</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>10</th>
+                <th>SISTER
+                    <th>A.DHANA LAKSHMI</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>11</th>
+                <th>VILLAGE
+                    <th>GANDEPALLI</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>12</th>
+                <th>MANDAL
+                    <th>GANDEPALLI MANDAL</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>13</th>
+                <th>DISTICK
+                    <th>KAKINADA</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>14</th>
+                <th>PIN NUM
+                    <th>533297</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>15</th>
+                <th>INSTA ID
+                    <th>Manu-7416</th>
+                </th>
+                </tr>
+                <tr>
+                    <th>16</th>
+                <th>GMAIL ID
+                    <th>arjimanohar6@gmail.com</th>
+                </th>
+                </tr>
+                   
+            </tbody>
+        </table>
+
+
+    </div>       
+            
+
     <footer>
         <h4>arjimanohar6@gmail.com</h4>
     </footer>
@@ -475,8 +609,13 @@
         }
         document.getElementById("sign").addEventListener("click",hide)
         function hide() {
+            alert("Login Successfull")
             document.querySelector("section").style.display = "block"
-            
+        }
+        function details(){
+            document.querySelector("section").style.display = "none"
+            document.querySelector(".details").style.display="block"
+            document.querySelector("nav").style.display="none"
 
         }
 
