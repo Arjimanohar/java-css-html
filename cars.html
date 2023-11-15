@@ -1,134 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhana Company</title>
-    <link rel="stylesheet" href="./dhana.css">
+
 </head>
+
 <body>
-<style>
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    background: linear-gradient(150deg,rgb(247, 103, 103),rgb(231, 231, 96),rgb(186, 136, 136));
-}
-nav{
-    text-align: center;
-    background: linear-gradient(to left,rgba(241, 162, 14, 0.916),rgb(251, 164, 164));
-    width: 100%;
-    position:fixed;
-    top: 0px ;
-    z-index: 1;
-}
-nav h1{
-    color: red;
-    padding: 0px 0px;
-}
-nav span{
-    color: blue;
-}
-nav ul{
-    list-style-type: none;
-}
-nav ul h1{
-    font-size: 50px;
-    padding-top:0;
-}
-nav ul a{
-    text-decoration: none;
-    width: 100%;
-}
-nav ul a li{
-    display: inline-block;
-    padding: 5px 30px ;
-    text-transform: capitalize;
-}
-nav ul a li:hover{
-    background-color: bisque;
-    color: black;
-    border-radius: 5px;
-    transform: scale(1.06);
-}
-nav  button{
-    border: none;
-    padding: 5px 15px;
-    margin: 0px;
-    background-color: red;
-    border-radius: 10px;
-    text-transform: capitalize;
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-}
-nav button:hover{
-    transform: scale(1.06);
-    /* transition : 1.5s; */
+        body {
+            background: linear-gradient(150deg, rgb(247, 103, 103), rgb(231, 231, 96), rgb(186, 136, 136));
+        }
 
-}
-img{
-    width: 100%;
-    height: 300px;
-    cursor: pointer;
-    object-fit: cover ;
-    border-radius: 10px;   
+        nav {
+            text-align: center;
+            background: linear-gradient(to left, rgba(241, 162, 14, 0.916), rgb(251, 164, 164));
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+        }
 
-}
-.im{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap:4px;
-    grid-row-gap:4px;
-    text-align: center;
-    padding-top: 91px;
-}
-.im div button{
-    border: none;
-    padding: 2px 25px;
-    font-size: 20px;
-    text-transform: capitalize;
-    background: none;
-}
-.im div button:hover{
-    background-color: rgb(255, 0, 81);
-    border-radius: 10px;
-    transform: scale(1.24);
-}
-img:hover{
-    transform: scale(1.010);
-    background: linear-gradient( rgba(0, 0, 0, 0.047),rgb(129, 127, 127)),url(./cars4.jpg);
-}
-footer{
-    padding-left: 10px;
-    background: linear-gradient(to left,rgba(241, 162, 14, 0.916),rgb(251, 164, 164));
+        nav h1 {
+            color: red;
+            padding: 0px 0px;
+        }
 
-}
- 
-@media screen and (max-width:900px){
-    .im{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media screen and (max-width:500px){
-    .im{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-</style>
+        nav span {
+            color: blue;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul h1 {
+            font-size: 50px;
+            padding-top: 0;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            position: relative;
+        }
+
+        nav ul a li {
+            display: inline-block;
+            padding: 5px 30px;
+            text-transform: capitalize;
+        }
+
+        nav ul a li:hover {
+
+            color: black;
+            border-radius: 5px;
+            transform: scale(1.06);
+        }
+
+        nav button {
+            border: none;
+            padding: 5px 15px;
+            margin: 0px;
+            background-color: red;
+            border-radius: 10px;
+            text-transform: capitalize;
+
+        }
+
+        nav button:hover {
+            transform: scale(1.06);
+            /* transition : 1.5s; */
+
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+            cursor: pointer;
+            object-fit: cover;
+            border-radius: 10px;
+
+        }
+
+        .im {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 4px;
+            grid-row-gap: 4px;
+            text-align: center;
+            padding-top: 91px;
+        }
+
+        .im div button {
+            border: none;
+            padding: 2px 25px;
+            font-size: 20px;
+            text-transform: capitalize;
+            background: none;
+        }
+
+        .im div button:hover {
+            background-color: rgb(255, 0, 81);
+            border-radius: 10px;
+            transform: scale(1.24);
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            background-color: red;
+            left: 0px;
+            height: 5px;
+            bottom: -7px;
+            width: 0;
+            transition: 0.1s;
+        }
+
+        a:hover::after {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        img:hover {
+            transform: scale(1.010);
+            background: linear-gradient(rgba(0, 0, 0, 0.047), rgb(129, 127, 127)), url(./cars4.jpg);
+        }
+
+        footer {
+            padding-left: 10px;
+            background: linear-gradient(to left, rgba(241, 162, 14, 0.916), rgb(251, 164, 164));
+
+        }
+
+        .signup {
+            position: absolute;
+            justify-content: center;
+            width: 290px;
+            height: 600px;
+            margin-top: 90px;
+            background: white;
+            border-radius: 6px;
+            text-transform: capitalize;
+            background-color: transparent;
+            border: 1px solid white;
+            display: none;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        form {
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        form label {
+            display: flex;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 7px;
+            border: none;
+            border: 1px solid gray;
+            border-radius: 6px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            width: 250px;
+            margin-top: 20px;
+            font-size: 18px;
+            border: none;
+            background-color: rgb(255, 69, 0);
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            color: white;
+            background-color: rgb(49, 184, 247);
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        @media screen and (max-width:900px) {
+            .im {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .im {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
 
     <nav>
         <ul>
             <h1>D<span>hana</span> C<span>ars</span></h1>
-             <a href="#"><li>home</li></a>
-            <a href="#"><li>details</li></a>
-            <a href="#"><li>order</li></a>
-            <a href="#"><li>about</li></a>
-            <a href="#"><li>setting</li></a>
-            <button>login</button>
+            <a href="#">
+                <li>home</li>
+            </a>
+            <a href="#">
+                <li>details</li>
+            </a>
+            <a href="#">
+                <li>order</li>
+            </a>
+            <a href="#">
+                <li>about</li>
+            </a>
+            <a href="#">
+                <li>setting</li>
+            </a>
+            <button onclick="login()">login</button>
         </ul>
-    </nav>  
+    </nav>
     <section class="im">
         <div>
             <img src="./cars1.jpg" alt="">
@@ -335,13 +441,47 @@ footer{
             <button>buy</button>
         </div>
         <div>
-        <img src="./cars2.jpg" alt="">
-        <button>buy</button> 
+            <img src="./cars2.jpg" alt="">
+            <button>buy</button>
     </section>
+    <div class="signup">
+        <h1>Sign Up</h1>
+        <form action="" method="post">
+
+            <label for="">student Name</label>
+            <input type="text" name="stuname">
+            <label for="">student ID</label>
+            <input type="number" name="stuid">
+            <label for="">mobile number</label>
+            <input type="number" name="mobile">
+            <label for="">address</label>
+            <input type="text" name="address">
+            <label for="">email</label>
+            <input type="gmail" name="email">
+            <label for="">password</label>
+            <input type="password" name="password">
+            <input id="sign" type="submit" value="submit">
+            <p>Already you have account?<a href="#">login here</a></p>
+        </form>
+    </div>
     <footer>
         <h4>arjimanohar6@gmail.com</h4>
     </footer>
-     
-</body>
-</html>
+    <script>
 
+        function login() {
+            document.querySelector("section").style.display = "none"
+            document.querySelector(".signup").style.display = "block"
+        }
+        document.getElementById("sign").addEventListener("click",hide)
+        function hide() {
+            document.querySelector("section").style.display = "block"
+            
+
+        }
+
+    </script>
+
+</body>
+
+</html>
