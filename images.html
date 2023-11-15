@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>create</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      
+    }
+    body{
+      background: linear-gradient(150deg,rgb(245, 106, 106),rgb(88, 88, 222));
+      height: 100vh;
+    }
+   
+
+    #navebar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      text-transform: capitalize;
+      background: linear-gradient(170deg,rgb(15, 210, 227),rgb(30, 109, 229),rgb(206, 146, 50));
+      position: sticky;
+    }
+
+    ul {
+      list-style-type: none;
+      text-transform: capitalize;
+
+    }
+
+    ul li {
+      display: inline-block;
+      text-decoration: none;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 0px 20px;
+      font-size: 20px;
+
+    }
+
+    select {
+      background-color: transparent;
+      border: none;
+      font-size: 18px;
+      text-transform: capitalize;
+      border-radius: 8px;
+      padding: 5px;
+    }
+
+    #but button {
+      border: none;
+      background-color: aquamarine;
+      font-size: 20px;
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 5px;
+    }
+
+    #but button:hover {
+      background-color: rgb(127, 185, 255);
+    }
+
+    ul li:hover {
+      background-color: blueviolet;
+
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-left: 20px;
+    }
+
+    .image {
+      position: absolute;
+      display: flex;
+      gap: 20px;
+      overflow: scroll;
+      top: 200px;
+      height: 300px;
+
+    }
+
+    .image img {
+      border-radius: 20px;
+      -webkit- ;
+      
+    }
+    .image img:hover{
+      transform: scale(0.897);
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navebar">
+    <div>
+      <h1>manohar</h1>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#">home</a></li>
+        <select name="#" id="">
+          <option value="#">home</option>
+          <option value="#">setting</option>
+          <option value="#">account</option>
+          <option value="#">site</option>
+          <option value="#">like</option>
+        </select>
+        <li><a href="#">setting</a></li>
+        <li><a href="#">account</a></li>
+        <li><a href="#">site</a></li>
+        <li><a href="#">like</a></li>
+      </ul>
+    </div>
+    <div id="but">
+      <button>login</button>
+      <button>signup</button>
+    </div>
+  </nav>
+  <div class="image">
+    <img src="./th (1).jpeg" alt="">
+    <img src="./th (2).jpeg" alt="">
+    <img src="./th (3).jpeg" alt="">
+    <img src="./th (4).jpeg" alt="">
+    <img src="./th (5).jpeg" alt="">
+    <img src="./th (6).jpeg" alt="">
+    <img src="./th (7).jpeg" alt="">
+    <img src="./th (8).jpeg" alt="">
+    <img src="./th (9).jpeg" alt="">
+    <img src="./th.jpeg" alt="">
+  </div>
+</body>
+
+</html>
