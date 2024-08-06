@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>status</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: rgb(27, 119, 200);
+  }
+  .box{
+    position: relative;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 40px;
+
+  }
+   h1{
+    color: #f211cc;
+    text-shadow: 2px 2px black;
+    font-size: 8rem;
+    z-index: 3;
+    border-radius: 40px;
+    background-image: url(./cars1.jpg);
+    backdrop-filter: blur(20px);
+    padding: 24px 64px;
+    text-transform: capitalize;
+  }
+  .box::after{
+    content: "";
+    width: 900px;
+    position: absolute;
+    height: 50%;
+    background: linear-gradient(45deg,red,blue);
+    animation: a 4s linear infinite;
+    inset: 9px;
+  
+  }
+  
+  @keyframes a {
+    100%{
+      transform: rotate(360deg);
+    }
+    
+  }
+
+</style>
+<body>
+  <div class="box">
+    <h1>chaitanya</h1>
+  </div>
+</body>
+</html>
